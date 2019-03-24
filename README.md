@@ -9,6 +9,8 @@ Relayout da página inicial do site Alfama cursos, como forma de teste de contra
 ```
 |_ assets
   |_ imgs
+    |_ cursos
+    |_ home
   |_ fonts
 |_ css
   |_ botstrap
