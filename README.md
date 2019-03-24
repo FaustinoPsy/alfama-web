@@ -6,6 +6,7 @@ Relayout da página inicial do site Alfama cursos, como forma de teste de contra
 ---
 
 ## Estrutura das pastas
+```
 |_ assets
   |_ imgs
   |_ fonts
@@ -16,4 +17,4 @@ Relayout da página inicial do site Alfama cursos, como forma de teste de contra
   |_ custom
 |_ js
   |_ bootstrap
-
+```
