@@ -1,0 +1,26 @@
+#top-bar{
+    border-bottom: 1px solid #ddd;
+}
+
+#menu-top .focus{
+    background-color: var(--blue);
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: white;
+}
+#menu-top .focus:hover{
+    background-color: var(--darkblue);
+}
+
+#students{
+    padding: 50px;
+}
+#students img{
+    width: 500px;
+    margin: auto;
+}
+
+.slogan{
+    min-height: 220px;
+
+}

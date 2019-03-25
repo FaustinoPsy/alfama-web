@@ -1,0 +1,202 @@
+*{
+    box-sizing: border-box;
+    transition: all 0.4s;
+}
+
+/* Tipografia */
+body{
+    font-family: releway, sans-serif;
+    font-size: 1.2rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: roboto-bold, sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4{
+    letter-spacing: -2.7px;
+}
+
+h5, h6{
+    letter-spacing: -1px;
+}
+
+p{
+    line-height: 22px;
+    letter-spacing: -0.7px;
+    text-align: justify;
+}
+
+p::first-letter{
+    margin-left: 30px;
+}
+
+h1 italic, h2 italic, h3 italic, h4 italic, h5 italic, h6 italic{
+    font-family: roboto-bold-italic, sans-serif;
+}
+
+p italic, italic{
+    font-style: italic;
+}
+
+h1 bold, h2, bold, h3 bold, h4 bold, h5 bold, h6 bold{
+    font-family: roboto-black, sans-serif;
+}
+
+bold{
+    font-family: releway-bold;
+}
+
+::selection{
+    background-color: rgb(0,80,120) !important;
+    color: white;
+}
+
+
+.title{
+    margin-bottom: 20px;
+}
+
+h1.title-lg{
+    font-size: 5rem;
+    line-height: 70px;
+}
+
+.title-border{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+}
+
+.white{
+    color: white;
+}
+
+.blue{
+    color: var(--blue);
+}
+
+.orange{
+    color: var(--orange);
+}
+
+
+/* Position */
+
+.position-relative{
+    position: relative;
+}
+
+.position-absolute{
+    position: absolute;
+}
+
+.position-fixed{
+    position: fixed;
+}
+
+
+
+/* Flex */
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.items-center{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content-center{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.d-flex-column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+/* Buttons */
+
+button{
+    border: none;
+    font-family: roboto;
+    letter-spacing: -1px;
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: var(--blue);
+    color: white;
+}
+
+button:hover{
+    background-color: var(--darkblue);
+}
+
+button:focus{
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+button.btn-lg, button.btn-success{
+    border-radius: 0px !important;
+}
+
+
+/* Size */
+.vh-100{
+    height: 100vh;
+}
+
+.vh-50{
+    height: 50vh;
+}
+
+.vh-70{
+    height: 70vh;
+}
+
+/* Backgrounds */
+
+.bg-orange{
+    background-color: var(--orange);
+    color: white;
+}
+
+.bg-blue{
+    background-color: var(--blue);
+    color: white;
+}
+
+.bg-darkblue{
+    background-color: var(--darkblue);
+    color: white;
+}
+
+.bg-gradient-orange{
+    background: linear-gradient(to bottom left, var(--orange), var(--darkorange))
+}
+
+.bg-gradient-blue{
+    background: linear-gradient(to bottom left, var(--blue), var(--darkblue))
+}
+
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
