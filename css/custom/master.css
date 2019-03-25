@@ -159,6 +159,10 @@ button.btn-lg, button.btn-success{
     height: 100vh;
 }
 
+.vh-85{
+    min-height: 85vh;
+}
+
 .vh-50{
     height: 50vh;
 }
