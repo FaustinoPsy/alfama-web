@@ -10,17 +10,67 @@
 }
 #menu-top .focus:hover{
     background-color: var(--darkblue);
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    
+}
+
+.menu-sm{
+    display: none;
+}
+
+.border-bottom{
+    border-bottom: 1px solid #ddd;
 }
 
 #students{
-    padding: 50px;
+    padding: 50px 0px;
+    text-align: center;
 }
 #students img{
-    width: 500px;
-    margin: auto;
+    width: 100%;
 }
 
 .slogan{
     min-height: 220px;
+}
 
+#modal #logo{
+    text-align: center;
+}
+
+#modal #logo img{
+    width: 130px;
+}
+
+@media (max-width: 578px){
+    .menu-lg{
+        display: none !important;
+    }
+    #modal{
+        height: 100vh;
+    }
+    #modal #logo img{
+        width: 160px;
+    }
+    .close-modal{
+        font-size: 130%;
+    }
+    #space-student input, #space-student button{
+        font-size: 1.4rem;
+    }
+    .slogan{
+        word-break: break-all;
+    }
+
+    .menu-sm{
+        display: flex;
+    }
+
+}
+
+@media (min-width: 578px){
+    #menu-sm{
+        display: none;
+    }
 }

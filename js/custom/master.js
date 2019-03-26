@@ -28,29 +28,56 @@ window.onload = function () {
         .clear()
         .start()
 
-    
-    // Animações
-    
 
-    // Backgorunds
-    const backgrounds = document.querySelectorAll('bg')
-    backgrounds.forEach(element => {
-        element.style.background = `ur('${element.getAttribute('src')}')`
+    // Modals
+    const buttonsModal = document.querySelectorAll('.button-modal')
+    const buttonsCloseModal = document.querySelectorAll('.close-modal')
+    const containersModal = document.querySelectorAll('.container-modal')
+    const closeContainerModal = document.querySelectorAll('#close-modal-container')
+    buttonsModal.forEach(button => {
+        const target = document.querySelector(button.getAttribute('target'))
+        button.onclick = function (event) {
+            
+            event.preventDefault()
+            target.style.display = 'flex'
+            document.body.style.overflow = 'hidden'
+        }
     })
+    buttonsCloseModal.forEach(button => {
+        button.onclick = fadeOut
+        closeContainerModal.forEach(container => {
+            container.onclick = fadeOut
+        })
+
+        function fadeOut() {
+            containersModal.forEach(container => {
+                container.classList.add('fadeOut')
+                setTimeout(() => {
+                    container.style.display = "none"
+                    container.classList.remove('fadeOut')
+                    document.body.style.overflow = 'initial'
+                }, 1000)
+            })
+        }
+    })
+
+
+
+
 }
 
 function animate(elements, animation) {
-    if(Array.isArray(elements)){
+    if (Array.isArray(elements)) {
         elements.forEach(element => {
             const el = document.querySelector(element)
             addClassAnimate(el)
-        })    
-    }else{
+        })
+    } else {
         const el = document.querySelector(elements)
         addClassAnimate(el)
     }
 
-    function addClassAnimate(element){
+    function addClassAnimate(element) {
         element.classList.add('animated')
         element.classList.add(animation)
     }
