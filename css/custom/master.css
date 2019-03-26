@@ -125,7 +125,14 @@ h1.title-lg{
     position: fixed;
 }
 
+.line-h-15{
+    line-height: 15px;  
+}
 
+a:hover{
+    color: var(--blue);
+    text-decoration: none;
+}
 
 /* Flex */
 

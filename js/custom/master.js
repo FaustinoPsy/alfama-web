@@ -37,7 +37,6 @@ window.onload = function () {
     buttonsModal.forEach(button => {
         const target = document.querySelector(button.getAttribute('target'))
         button.onclick = function (event) {
-            
             event.preventDefault()
             target.style.display = 'flex'
             document.body.style.overflow = 'hidden'
@@ -61,27 +60,36 @@ window.onload = function () {
         }
     })
 
+    // Menu Mais
+    const buttonMenuMais = document.querySelectorAll('.btn-menu-mais')
+    const menuMais = document.querySelector('#menu-mais')
+    const homePage = document.querySelector('#home-page')
+    const buttonCloseMenuMais = document.querySelector('#close-menu-mais')
+    buttonMenuMais.forEach(button => {
+        button.onclick = function(){
+            menuMais.style.display = 'flex'
+        }
+    })
+
+    // homePage.onclick = closeMenuMais 
+    buttonCloseMenuMais.onclick = closeMenuMais
+
+    function closeMenuMais(){
+        menuMais.classList.remove('slideInRight')
+        menuMais.classList.add('slideOutRight')
+
+        setTimeout(() => {
+            menuMais.style.display = 'none'
+            menuMais.classList.remove('slideOutRight')
+            menuMais.classList.add('slideInRight')
+        }, 1000)
+    }
+
 
 
 
 }
 
-function animate(elements, animation) {
-    if (Array.isArray(elements)) {
-        elements.forEach(element => {
-            const el = document.querySelector(element)
-            addClassAnimate(el)
-        })
-    } else {
-        const el = document.querySelector(elements)
-        addClassAnimate(el)
-    }
-
-    function addClassAnimate(element) {
-        element.classList.add('animated')
-        element.classList.add(animation)
-    }
-}
 
 
 

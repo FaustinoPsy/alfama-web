@@ -23,6 +23,10 @@
     border-bottom: 1px solid #ddd;
 }
 
+.border-bottom-lg{
+    border-bottom: 2px solid #ddd;
+}
+
 #students{
     padding: 50px 0px;
     text-align: center;
@@ -41,6 +45,30 @@
 
 #modal #logo img{
     width: 130px;
+}
+
+#menu-mais{
+    top: 100px;
+    right: 0;
+    z-index: 500;
+    width: 300px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.item-menu-mais:hover{
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0px 0px 5px white;
+
+}
+.item-menu-mais{
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.item-menu-mais i.fa{
+    transition: none !important;
 }
 
 @media (max-width: 578px){
@@ -65,6 +93,12 @@
 
     .menu-sm{
         display: flex;
+    }
+
+    #menu-mais{
+        width: 100%;
+        padding: 30px !important;
+        top: 0;
     }
 
 }
