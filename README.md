@@ -12,11 +12,26 @@ Relayout da página inicial do site Alfama cursos, como forma de teste de contra
     |_ cursos
     |_ home
   |_ fonts
+    |_ releway
+    |_ roboto
 |_ css
-  |_ botstrap
   |_ animate.css
-  |_ fontawesome
+  |_ bootstrap
   |_ custom
+  |_ fontawesome
 |_ js
   |_ bootstrap
+  |_ custom
+  |_ fontawesome
+  |_ t-write
 ```
+
+---
+
+## Mapa da Página
+- Presentation
+- Benefícios
+- Cursos
+- Depoimentos
+- Rede Sociais
+- Rodapé
