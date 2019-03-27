@@ -141,7 +141,7 @@ window.onload = function () {
     }
 
 
-    bioEp.init({})
+    window.bioEp.init({})
 
     setTimeout(() => {
         document.getElementById('bio_ep').style.opacity = 1

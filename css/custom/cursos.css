@@ -57,3 +57,9 @@
 #btn-matricular{
     height: 10%;
 }
+
+@media (max-width: 578px){
+    #filter-cursos-input, #filter-duration-curso, #filter-start-curso{
+        font-size: 2rem;
+    }
+}

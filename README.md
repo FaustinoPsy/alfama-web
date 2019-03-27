@@ -7,6 +7,7 @@ Relayout da página inicial do site Alfama cursos, como forma de teste de contra
 
 ## Estrutura das pastas
 ```
+|_ api
 |_ assets
   |_ imgs
     |_ cursos
@@ -19,11 +20,15 @@ Relayout da página inicial do site Alfama cursos, como forma de teste de contra
   |_ bootstrap
   |_ custom
   |_ fontawesome
+  |_ fonts
 |_ js
+  |_ bioep
   |_ bootstrap
   |_ custom
   |_ fontawesome
+  |_ render
   |_ t-write
+  |_ wow
 ```
 
 ---
@@ -35,3 +40,43 @@ Relayout da página inicial do site Alfama cursos, como forma de teste de contra
 - Depoimentos
 - Rede Sociais
 - Rodapé
+
+---
+
+## Como usar
+
+### Clone o repositório
+```git
+git clone https://github.com/lucas123ho/alfama-web.git
+
+```
+### Instale as dependências da API
+#### 1 - Entre na pasta './api'
+```bash
+cd api
+```
+#### 2 - Instale com o NPM
+```bash
+npm i
+```
+**Ainda nesta pasta**, inicie o servidor local
+
+### Iniciando Servidor Local
+```bash
+npm start
+```
+
+### Acesse
+No console aparecerá os dados de acesso:
+```bash
+Local: http://localhost:PORT
+Acesse: http://SEU_IP:PORT
+```
+
+## API Config
+```JSON
+{
+  "port": 3001 // Default
+}
+```
+***Path: './api/config.json***

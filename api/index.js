@@ -3,13 +3,25 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const _ = require('lodash')
-
-const port = 3001
+const path = require('path')
+const ejs = require('ejs')
 const cursos = require('./cursos.json')
+const config = require('./config.json')
+const ip = require('ip').address()
+
+const port = config.port
 
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static(path.join('../')))
+app.set('views', path.join('../'))
+app.engine('html', ejs.renderFile)
+app.set('view engine', 'html')
 
+
+app.get('/', (req, resp) => {
+    resp.render('index')
+})
 
 app.get('/cursos', (req, resp) => {
     const filterName = req.query.q ? req.query.q.toLowerCase() : ''
@@ -58,5 +70,11 @@ app.get('/cursos', (req, resp) => {
 })
 
 app.listen(port, () => {
-    console.log('Servidor rodando na porta: ' + port)
+    console.log(`
+        ---
+        Local: http://localhost:${port}
+        ---
+        Acesse: http://${ip}:${port}
+        ---
+    `)
 })
