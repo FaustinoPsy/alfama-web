@@ -44,7 +44,7 @@ window.onload = function () {
                 scrollTop: 0
             }, 500);
             target.style.display = 'flex'
-            document.body.style.overflow = 'hidden'
+            // document.body.style.overflow = 'hidden'
         }
     })
     buttonsCloseModal.forEach(button => {
@@ -59,7 +59,7 @@ window.onload = function () {
                 setTimeout(() => {
                     container.style.display = "none"
                     container.classList.remove('fadeOut')
-                    document.body.style.overflow = 'initial'
+                    // document.body.style.overflow = 'initial'
                 }, 1000)
             })
         }

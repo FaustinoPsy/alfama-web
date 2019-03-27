@@ -1,9 +1,12 @@
 #image-bene img{
-    width: 300px;
+    width: 60%;
 }
 
 @media (max-width: 578px){
     #text-bene{
         text-align: center !important;
+    }
+    #image-bene img{
+        width: 80%;
     }
 }

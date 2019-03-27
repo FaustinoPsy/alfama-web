@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alfama Cursos Técnicos</title>
     <link rel="icon" href="./assets/imgs/favicon.png">
@@ -35,45 +35,45 @@
     <script src="./js/render/cursos.js"></script>
 </head>
 
-<body>
+<body class="overflow-x-hidden"> 
     <!-- Menu mais -->
-    <div id="menu-mais" class="position-fixed bg-blue pb-4 pl-1 pr-1 d-flex-column animated slideInRight">
-        <div class="w-100 p-3">
+    <div id="menu-mais" class="position-fixed bg-blue pb-4 pl-1 pr-1 d-flex-column flex-no-wrap animated slideInRight">
+        <div class="w-100 p-2">
             <i class="fa fa-chevron-circle-right cursor-pointer text-lg" id="close-menu-mais"></i>
         </div>
         <div class="d-flex flex-wrap content-center">
             <a href=""
-                class="col-lg-5 col-md-5 col-sm-3 p-2 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
+                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
                 <i class="fa fa-home text-lg"></i>
                 Início
             </a>
             <a href="https://www.alfamacursostecnicos.com.br/cursostecnicos/quemsomos"
-                class="col-lg-5 col-md-5 col-sm-3 p-2 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
+                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
                 <i class="fa fa-users text-lg"></i>
                 <span class="line-h-15">Quem Somos</span>
             </a>
             <a href="https://www.alfamacursostecnicos.com.br/cursostecnicos/certificacoes"
-                class="col-lg-5 col-md-5 col-sm-3 p-2 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
+                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
                 <i class="fa fa-medal text-lg"></i>
                 Certificados
             </a>
             <a href="https://www.alfamacursostecnicos.com.br/cursostecnicos/polos"
-                class="col-lg-5 col-md-5 col-sm-3 p-2 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
+                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
                 <i class="fa fa-warehouse text-lg"></i>
                 Polos
             </a>
             <a href="https://www.alfamacursostecnicos.com.br/cursostecnicos/parceiros"
-                class="col-lg-5 col-md-5 col-sm-3 p-2 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
+                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
                 <i class="fa fa-user-friends text-lg"></i>
                 Parceiros
             </a>
             <a href="https://www.alfamacursostecnicos.com.br/cursostecnicos/faq"
-                class="col-lg-5 col-md-5 col-sm-3 p-2 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
+                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
                 <i class="fa fa-question-circle text-lg"></i>
                 FAQ
             </a>
             <a href="https://www.alfamacursostecnicos.com.br/cursostecnicos/contato"
-                class="col-lg-5 col-md-5 col-sm-3 p-2 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
+                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
                 <i class="fa fa-phone text-lg"></i>
                 <span class="line-h-15">Fale Conosco</span>
             </a>
@@ -99,13 +99,13 @@
     </div>
 
     <!-- Home Page -->
-    <main id="home-page" class="animated delay-1s fadeIn">
+    <main id="home-page" class="animated fadeIn delay-1s">
 
         <!-- Presentation -->
         <section id="presentation" class="">
 
             <!-- Barra Superior -->
-            <div id="top-bar" class="col-xs-12 d-flex pt-4 pb-4 items-center wow fadeIn">
+            <div id="top-bar" class="col-xs-12 d-flex pt-4 pb-4 items-center">
 
                 <!-- Logo -->
                 <div id="logo-top" class="col-sm-2 text-center">
@@ -128,7 +128,7 @@
             </div>
 
             <!-- Barras menu menor -->
-            <div class="menu-sm wow fadeIn content-center p-3 border-bottom" data-toggle="collapse"
+            <div class="menu-sm content-center p-3 border-bottom" data-toggle="collapse"
                 href="#menu-sm">
                 <i class="fa fa-bars text-lg blue"></i>
             </div>
@@ -145,7 +145,7 @@
             <div id="content-presentation" class="container d-flex flex-wrap vh-100">
 
                 <!-- Animação escrita -->
-                <div id="text-content" class="col-lg-6 col-sm-12 d-flex-column p-5 wow fadeIn">
+                <div id="text-content" class="col-lg-6 col-sm-12 d-flex-column p-5">
                     <div>
                         <bold>Só na <span class="blue">Alfama</span> <span class="orange">Cursos</span></bold>
                     </div>
@@ -158,7 +158,7 @@
                 </div>
 
                 <!-- Imagem -->
-                <div id="students" class="col-lg-6 col-sm-12 wow fadeIn">
+                <div id="students" class="col-lg-6 col-sm-12">
                     <!-- substituir por SVG -->
                     <img src="./assets/imgs/home/students.svg" alt="">
                 </div>
@@ -248,7 +248,7 @@
     <!-- Modal -->
     <div id="student-space-modal" class="container-modal center wow fadeIn">
         <div id="close-modal-container" class="position-absolute"></div>
-        <div class="col-lg-4 col-md-5 col-sm-12 overflow-hidden wow zoomIn pl-5 pr-5 content-center d-flex-column"
+        <div class="col-lg-4 col-md-5 col-sm-12 wow zoomIn pl-5 pr-5 content-center d-flex-column flex-no-wrap"
             id="modal">
             <div class="close-modal"><i class="fa fa-times"></i></div>
             <div id="logo" class="mb-4">
@@ -260,7 +260,7 @@
             </div>
             <div id="container-form-student-modal" class="mt-1">
                 <form id="space-student">
-                    <input type="text" placeholder="CPF / E-mail" class="form-control mb-4">
+                    <input type="text" placeholder="CPF / E-mail" focus class="form-control mb-4">
                     <input type="password" placeholder="Senha" class="form-control">
                     <small id="passwordHelpBlock" class="form-text  mb-4">
                         <a href="#">Esqueceu a senha?</a>

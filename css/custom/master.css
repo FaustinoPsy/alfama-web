@@ -3,6 +3,17 @@
     transition: all 0.4s;
 }
 
+@-ms-viewport{
+    width: 100vw;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.flex-no-wrap{
+    flex-wrap: nowrap !important;
+}
 
 #bio_ep_bg {
     background-color: var(--blue);
@@ -293,6 +304,10 @@ button.btn-lg, button.btn-success{
     overflow: hidden;
 }
 
+.overflow-x-hidden{
+    overflow-x: hidden;
+}
+
 .wave{
     height: 200px;
     /* background-color: red; */
@@ -306,7 +321,7 @@ button.btn-lg, button.btn-success{
 .container-modal, #close-modal-container{
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
