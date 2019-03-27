@@ -130,7 +130,7 @@ http://localhost:3001/cursos?q=admi&d=14&s=imediato
 ```
 
 ## Funções importantes
-## Filtrar Cursos (filterCursos)
+### Filtrar Cursos (filterCursos)
 ```javascript
 filterCursos(filterName, filterDuration, filterStart)
 ```
@@ -139,4 +139,5 @@ filterCursos(filterName, filterDuration, filterStart)
 | filterName     | Filtra pelo Título e Descrição |   ''   | String | 
 | filterDuration | Filtra pelo duração do curso   |   ''   | String |
 | filterStart    | Filtra pelo início do curso    |   ''   | String |
+
 ***Obs.: Esta função pode ser invocada em qualquer escopo***
