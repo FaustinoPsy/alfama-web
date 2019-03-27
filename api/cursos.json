@@ -1,0 +1,134 @@
+[
+    {
+        "id": 0,
+        "type": 1,
+        "name": "Administração",
+        "description": "O Curso Técnico em Administração dá qualificação ao profissional que deseja atuar como Gestor de Recursos Humanos.",
+        "duration": "14 Meses",
+        "start": "Imediato",
+        "location": "Sergipe",
+        "imgName": "adm",
+        "link": "https://www.alfamacursostecnicos.com.br/cursostecnicos/administracao"
+    },
+    {
+        "id": 1,
+        "type": 1,
+        "name": "Corretor de Imóves",
+        "description": "Faça o curso Técnico em Transações Imobiliárias (TTI) e torne-se Corretor de Imóveis – uma das profissões mais valorizadas e requisitadas do mercado na atualidade.",
+        "duration": "5 Meses",
+        "start": "Imediato",
+        "location": "Sergipe / Alagos",
+        "imgName": "corretor",
+        "link": "https://www.alfamacursostecnicos.com.br/cursostecnicos/transacoes-imobiliarias"
+    },
+    {
+        "id": 2,
+        "type": 1,
+        "name": "Edificações",
+        "description": "O Curso Técnico em Edificações dá qualificações ao profissional que deseja atuar em Projetista em Edificações (Autocad) e Assistente de Supervisor em Obras Civis.",
+        "duration": "19 Meses",
+        "start": "Imediato",
+        "location": "Sergipe / Alagos",
+        "imgName": "edificacoes",
+        "link": "https://www.alfamacursostecnicos.com.br/cursostecnicos/tecnico-edificacoes"
+    },
+    {
+        "id": 3,
+        "type": 1,
+        "name": "Segurança do Trabalho",
+        "description": "O Curso Técnico em Segurança do Trabalho dá qualificações ao profissional que deseja atuar como Auditor de Saúde e Segurança e Gestor de Segurança e de Risco.",
+        "duration": "18 Meses",
+        "start": "Imediato",
+        "location": "Sergipe / Alagos",
+        "imgName": "seg-trabalho",
+        "link": "https://www.alfamacursostecnicos.com.br/cursostecnicos/tecnico-seguranca-trabalho"
+    },
+    {
+        "id": 4,
+        "type": 1,
+        "name": "Petróleo e Gás",
+        "description": "O Curso Técnico em Petróleo e Gás dá qualificações ao profissional que deseja atuar como Gestor de Operações e Operador de Sistemas de Petróleo e Gás.",
+        "duration": "19 Meses",
+        "start": "Imediato",
+        "location": "Sergipe / Alagos",
+        "imgName": "petro-gas",
+        "link": "https://www.alfamacursostecnicos.com.br/cursostecnicos/petroleo"
+    },
+    {
+        "id": 5,
+        "type": 1,
+        "name": "Meio Ambiente",
+        "description": "O Curso Técnico em Meio Ambiente dá qualificação ao profissional que deseja atuar em Projetista em Assistente de Auditoria Ambiental.",
+        "duration": "14 Meses",
+        "start": "Imediato",
+        "location": "Sergipe / Alagos",
+        "imgName": "meio-ambiente",
+        "link": "https://www.alfamacursostecnicos.com.br/cursostecnicos/meio-ambiente"
+    },
+    {
+        "id": 6,
+        "type": 2,
+        "name": "Documentação Imobiliária",
+        "description": "O curso tem como objetivo atualizar, informar e orientar o profissional na realização de negócios duradouros com ética e responsabilidade, trazendo aos clientes segurança quanto a concretização na aquisição do imóvel próprio.",
+        "duration": "30 Horas", 
+        "start": "Imediato",
+        "location": "Sergipe / Alagos",
+        "imgName": "doc-imob",
+        "link": "https://www.alfamacursostecnicos.com.br/cursostecnicos/documentacao-imobiliaria"
+    },
+    {
+        "id": 6,
+        "type": 2,
+        "name": "Avaliação Imobiliária",
+        "description": "Conhecido popularmente como PTAM, o curso Avaliação de Imóveis capacita profissionais do mercado imobiliário e áreas afins a obterem conhecimento de avaliações imobiliárias mercadológicas para emissão de parecer competente.",
+        "duration": "30 Horas", 
+        "start": "Imediato",
+        "location": "Sergipe / Alagos",
+        "imgName": "ava-imob",
+        "link": "https://www.alfamacursostecnicos.com.br/cursostecnicos/avaliacao-imobiliaria"
+    },
+    {
+        "id": 7,
+        "type": 2,
+        "name": "Técnicas de Vendas",
+        "description": "O curso convida o aluno a uma introdução ao mercado imobiliário e suas técnicas de vendas, visando capacitar os novos profissionais e aprimorar aqueles que já atuam na área, trazendo as principais teorias de vendas e práticas desse mercado.",
+        "duration": "30 Horas", 
+        "start": "Imediato",
+        "location": "Sergipe / Alagos",
+        "imgName": "tec-vendas",
+        "link": "https://www.alfamacursostecnicos.com.br/cursostecnicos/vendas"
+    },
+    {
+        "id": 8,
+        "type": 2,
+        "name": "Orçamento de Obras",
+        "description": "Aprenda todo o passo a passo para a confecção orçamentária de um projeto com nosso Curso de Extensão - Orçamento de Obras.",
+        "duration": "30 Horas", 
+        "start": "Imediato",
+        "location": "Sergipe",
+        "imgName": "orc-obras",
+        "link": "https://www.alfamacursostecnicos.com.br/cursostecnicos/orcamento-obra"
+    },
+    {
+        "id": 9,
+        "type": 2,
+        "name": "Topografia",
+        "description": "Com o Curso de Extensão em Topografia, você se prepara para realizar levantamentos topográficos convencionais e automatizados, dominando cada uma das etapas desse tipo de atividade.",
+        "duration": "30 Horas", 
+        "start": "Imediato",
+        "location": "Sergipe",
+        "imgName": "topografia",
+        "link": "https://www.alfamacursostecnicos.com.br/cursostecnicos/topografia"
+    },
+    {
+        "id": 10,
+        "type": 2,
+        "name": "AutoCad Digitalização de Projetos",
+        "description": "Aprenda a desenvolver projetos completos com o AutoCAD, um dos softwares mais utilizados para desenho técnico, em nosso Curso de Extensão - Digitalização de Projetos - AutoCAD",
+        "duration": "30 Horas", 
+        "start": "Imediato",
+        "location": "Sergipe",
+        "imgName": "autocad",
+        "link": "https://www.alfamacursostecnicos.com.br/cursostecnicos/digitalizacao"
+    }
+]

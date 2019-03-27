@@ -36,7 +36,8 @@
 }
 
 .slogan{
-    min-height: 220px;
+    min-height: 300px;
+    max-width: 100%;
 }
 
 #modal #logo{
@@ -88,9 +89,10 @@
         font-size: 1.4rem;
     }
     .slogan{
-        word-break: break-all;
+        min-height: 200px;
+        font-size: 3rem !important;
+        line-height: 40px !important;
     }
-
     .menu-sm{
         display: flex;
     }

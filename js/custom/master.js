@@ -25,6 +25,8 @@ window.onload = function () {
         .type('Curso de Topografia')
         .remove(10)
         .type('Tecnicas de vendas')
+        .remove('Tecnicas de vendas'.length)
+        .type('AutoCAD')
         .clear()
         .start()
 
@@ -38,6 +40,9 @@ window.onload = function () {
         const target = document.querySelector(button.getAttribute('target'))
         button.onclick = function (event) {
             event.preventDefault()
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
             target.style.display = 'flex'
             document.body.style.overflow = 'hidden'
         }
@@ -66,7 +71,7 @@ window.onload = function () {
     const homePage = document.querySelector('#home-page')
     const buttonCloseMenuMais = document.querySelector('#close-menu-mais')
     buttonMenuMais.forEach(button => {
-        button.onclick = function(){
+        button.onclick = function () {
             menuMais.style.display = 'flex'
         }
     })
@@ -74,7 +79,7 @@ window.onload = function () {
     // homePage.onclick = closeMenuMais 
     buttonCloseMenuMais.onclick = closeMenuMais
 
-    function closeMenuMais(){
+    function closeMenuMais() {
         menuMais.classList.remove('slideInRight')
         menuMais.classList.add('slideOutRight')
 
@@ -85,9 +90,65 @@ window.onload = function () {
         }, 1000)
     }
 
+    // WOW
+    new WOW().init();
+
+
+    // Imagens Cursos
+    const containerImagesCursos = document.querySelectorAll('.img-curso')
+    containerImagesCursos.forEach(container => {
+        const img = container.getAttribute('src')
+        container.style.backgroundImage = `url(${img})`
+    })
+
+
+    // Renderizar cursos
+    filterCursos()
+
+    const filterCursosInput = document.getElementById('filter-cursos-input')
+    const selectDuration = document.querySelector("#filter-duration-curso")
+    const selectStart = document.querySelector('#filter-start-curso')
+
+    filterCursosInput.onkeyup = filterCurso
+    selectDuration.onchange = filterCurso
+    selectStart.onchange = filterCurso
+
+
+    function filterCurso(){
+        let inputValue = filterCursosInput.value
+        let selectValue = selectDuration.value
+        let startValue = selectStart.value
+        
+        if(selectValue == "Todos"){
+            selectValue = ''
+        }
+
+        filterCursos(inputValue, selectValue, startValue)
+        console.log(inputValue, selectValue, startValue)
+    }
+    
 
 
 
+    // MoveTo
+    $("#btn-cursos").click(scrollToCursos)
+    $("#btn-cursos-sm").click(scrollToCursos)
+
+    function scrollToCursos() {
+        $('html, body').animate({
+            scrollTop: $("#cursos").offset().top
+        }, 1000);
+    }
+
+
+    bioEp.init({})
+
+    setTimeout(() => {
+        document.getElementById('bio_ep').style.opacity = 1
+    }, 4000)
+
+
+   
 }
 
 

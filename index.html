@@ -19,6 +19,9 @@
     <script src="./js/t-write/t-write.js"></script>
     <script src="./js/bootstrap/jquery.js"></script>
     <script src="./js/bootstrap/bootstrap.min.js"></script>
+    <script src="./js/wow/wow.js"></script>
+    <script src="./js/moveTo/moveTo.min.js"></script>
+    <script src="./js/bioep/bioep.min.js"></script>
 
 
     <!-- Custom -->
@@ -26,11 +29,15 @@
     <link rel="stylesheet" href="./css/fonts/fonts.css">
     <link rel="stylesheet" href="./css/custom/master.css">
     <link rel="stylesheet" href="./css/custom/presentation.css">
+    <link rel="stylesheet" href="./css/custom/beneficios.css">
+    <link rel="stylesheet" href="./css/custom/cursos.css">
     <!-- JS -->
     <script src="./js/custom/master.js"></script>
+    <script src="./js/render/cursos.js"></script>
 </head>
 
 <body>
+    <!-- Menu mais -->
     <div id="menu-mais" class="position-fixed bg-blue pb-4 pl-1 pr-1 d-flex-column animated slideInRight">
         <div class="w-100 p-3">
             <i class="fa fa-chevron-circle-right cursor-pointer text-lg" id="close-menu-mais"></i>
@@ -74,9 +81,29 @@
         </div>
 
     </div>
+
+    <!-- Modal saida -->
+    <div id="bio_ep">
+        <div class="w-100 center h-100">
+            <div class="w-100">
+                <div class="text-center" id="img-bey">
+                    <img src="./assets/imgs/home/bolsas.svg" width="250px" alt="">
+                </div>
+                <h1 class="orange pl-2 pr-2">
+                    Concorra a <span class="blue">Bolsas de Estudo</span>
+                </h1>
+                <div class="w-100 mt-2">
+                    <button class="w-100">Saiba Mais+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Page -->
     <main id="home-page" class="d-flex-column animated fadeIn">
+
         <!-- Presentation -->
-        <section id="presentation">
+        <section id="presentation" class="">
 
             <!-- Barra Superior -->
             <div id="top-bar" class="col-xs-12 d-flex pt-4 pb-4 items-center animated slideInDown">
@@ -95,36 +122,40 @@
                         <div class="p-2 mr-3 cursor-pointer focus button-modal" target="#student-space-modal"
                             class="container-modal">
                             Espaço do Aluno</div>
-                        <div class="p-2 cursor-pointer">Cursos</div>
+                        <div id="btn-cursos" class="p-2 cursor-pointer js-trigger">Cursos</div>
                         <div class="p-2 mr-4 cursor-pointer btn-menu-mais" id="">Mais+</div>
                     </div>
                 </nav>
             </div>
 
+            <!-- Barras menu menor -->
             <div class="menu-sm animated slideInDown content-center p-3 border-bottom" data-toggle="collapse"
                 href="#menu-sm">
                 <i class="fa fa-bars text-lg blue"></i>
             </div>
 
-            <div id="menu-sm" class="collapse">
+            <!-- Menu menor -->
+            <div id="menu-sm" class="collapse cursor-pointer">
                 <div class="p-3 text-center bg-blue w-100 border-bottom button-modal" target="#student-space-modal">
                     Espaço do Aluno</div>
-                <div class="p-3 text-center w-100  border-bottom">Cursos</div>
+                <div id="btn-cursos-sm" class="p-3 text-center w-100  border-bottom">Cursos</div>
                 <div class="p-3 text-center w-100 border-bottom btn-menu-mais" id="">Mais+</div>
             </div>
 
             <!-- Conteúdo Presentation -->
-            <div id="content-presentation" class="container d-flex flex-wrap">
+            <div id="content-presentation" class="container d-flex flex-wrap vh-100">
 
                 <!-- Animação escrita -->
                 <div id="text-content" class="col-lg-6 col-sm-12 d-flex-column p-5 animated slideInLeft">
                     <div>
-                        <bold>Alfama Cursos Técnicos:</bold>
+                        <bold>Só na <span class="blue">Alfama</span> <span class="orange">Cursos</span></bold>
                     </div>
                     <h1 class="slogan title-lg"></h1>
                     <div class="mt-3 mb-1">Concorra a <bold>Bolsas de estudos</bold>
                     </div>
-                    <button class="btn-lg">Saiba Mais+</button>
+                    <button class="btn-lg"
+                        onclick="location.href = 'https://www.alfamacursostecnicos.com.br/cursostecnicos/facaalfamacursos'">Saiba
+                        Mais+</button>
                 </div>
 
                 <!-- Imagem -->
@@ -132,8 +163,88 @@
                     <!-- substituir por SVG -->
                     <img src="./assets/imgs/home/students.svg" alt="">
                 </div>
+            </div>
         </section>
+
+        <!-- Benefícios -->
+        <section id="beneficios" class="bg-light pb-5">
+            <div class="wave"></div>
+            <section id="benes" class="container p-2">
+                <div id="bene" class="col-sm-12 d-flex flex-wrap pt-5 wow slideInLeft">
+                    <div id="image-bene" class="p-2 col-lg-6 col-md-6 col-sm-12 text-center">
+                        <img src="./assets/imgs/home/beneficios/clock.svg" alt="">
+                    </div>
+                    <div id="text-bene" class="p-2 col-lg-6 col-md-6 col-sm-12 text-left">
+                        <h1 class="mb-2 orange">Horários <span class="blue">Flexives</span></h1>
+                        <span class="text-lg">Você pode estudar de onde estiver e a hora que desejar.</span>
+                    </div>
+                </div>
+                <hr class="wow fadeIn">
+                <div id="bene" class="col-sm-12 d-flex-reverse flex-wrap pt-5 wow slideInRight">
+                    <div id="image-bene" class="p-2 col-lg-6 col-md-6 col-sm-12 text-center">
+                        <img src="./assets/imgs/home/beneficios/money.svg" alt="">
+                    </div>
+                    <div id="text-bene" class="p-2 col-lg-6 col-md-6 col-sm-12 text-right">
+                        <h1 class="mb-2 orange">Economia</h1>
+                        <span class="text-lg">Custos menores que os sistemas presenciais e tradicionais.</span>
+                    </div>
+                </div>
+                <hr class="wow fadeIn">
+                <div id="bene" class="col-sm-12 d-flex flex-wrap pt-5 wow slideInLeft">
+                    <div id="image-bene" class="p-2 col-lg-6 col-md-6 col-sm-12 text-center">
+                        <img src="./assets/imgs/home/beneficios/medal.svg" alt="">
+                    </div>
+                    <div id="text-bene" class="p-2 col-lg-6 col-md-6 col-sm-12 text-left">
+                        <h1 class="mb-2 orange">Credibilidade</h1>
+                        <span class="text-lg">Todos os cursos oferecidos são aprovados pelo Conselho estadual de
+                            Educação.</span>
+                    </div>
+                </div>
+                <hr class="wow fadeIn">
+                <div id="bene" class="col-sm-12 d-flex-reverse flex-wrap pt-5 wow slideInRight">
+                    <div id="image-bene" class="p-2 col-lg-6 col-md-6 col-sm-12 text-center">
+                        <img src="./assets/imgs/home/beneficios/virtual.svg" alt="">
+                    </div>
+                    <div id="text-bene" class="p-2 col-lg-6 col-md-6 col-sm-12 text-right">
+                        <h1 class="mb-2 orange">AVA <spa class="blue">Diferenciado</spa>
+                        </h1>
+                        <span class="text-lg">Utilizamos um ambiente fácil e diferenciado que inclui videoaulas e muitos
+                            outros recursos de aprendizagem.</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Cursos -->
+        <section id="cursos" class="vh-100 pt-5">
+            <div class="container">
+                <h1 class="orange">Escolha seu <span class="blue">curso</span></h1>
+                <div class="sub">e garata o sucesso!</div>
+                <div class="col-sm-12 p-3 mb-3 w-100 bg-light mt-3 d-flex">
+                    <div class="d-flex-column col-lg-4 col-md-4 col-sm-12">
+                        <small>Título: </small>
+                        <input type="text" id="filter-cursos-input" class="pl-2 pr-2">
+                    </div>
+                    <div class="d-flex-column col-lg-4 col-md-4 col-sm-12">
+                        <small>Duração:</small>
+                        <select id="filter-duration-curso" class="pl-2 pr-2 text-right">
+                            <option value="Todos">Todos</option>
+                        </select>
+                    </div>
+                    <div class="d-flex-column col-lg-4 col-md-4 col-sm-12">
+                        <small>Início:</small>
+                        <select id="filter-start-curso" class="pl-2 pr-2 text-right">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- Renderização dos cursos via API (./js/render/cursos.js) -->
+            <div id="container-cursos" class="container d-flex flex-wrap pt-4 pb-4 wow slideInUp"></div>
+        </section>
+
     </main>
+
+
 
     <!-- Modal -->
     <div id="student-space-modal" class="container-modal center animated fadeIn">
@@ -162,6 +273,7 @@
 
         </div>
     </div>
+
 </body>
 
 </html>

@@ -1,0 +1,9 @@
+#image-bene img{
+    width: 300px;
+}
+
+@media (max-width: 578px){
+    #text-bene{
+        text-align: center !important;
+    }
+}
