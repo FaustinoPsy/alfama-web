@@ -8,6 +8,10 @@ Relayout da página inicial do site Alfama cursos, como forma de teste de contra
 ## Estrutura das pastas
 ```
 |_ api
+|_ apresentação
+  |_ css
+  |_ imgs
+  |_ js
 |_ assets
   |_ imgs
     |_ cursos
@@ -15,6 +19,7 @@ Relayout da página inicial do site Alfama cursos, como forma de teste de contra
   |_ fonts
     |_ releway
     |_ roboto
+  |_ videos
 |_ css
   |_ animate.css
   |_ bootstrap
@@ -22,6 +27,7 @@ Relayout da página inicial do site Alfama cursos, como forma de teste de contra
   |_ fontawesome
   |_ fonts
 |_ js
+  |_ bigPicture
   |_ bioep
   |_ bootstrap
   |_ custom
