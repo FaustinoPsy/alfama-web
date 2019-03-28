@@ -2,7 +2,7 @@ let reloadSlect = true
 
 function filterCursos(param = '', duration = '', start = '', callback) {
     
-    fetch(`http://${location.host}/cursos?q=${param}&d=${duration}&s=${start}`)
+    fetch(`http://localhost:3001/cursos?q=${param}&d=${duration}&s=${start}`)
         .then(function(resp){return resp.json()})
         .then(function(data){renderCursos(data)})
         

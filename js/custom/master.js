@@ -5,28 +5,24 @@ window.onload = function () {
     const target = document.querySelector('.slogan')
     const writer = new Typewriter(target, {
         loop: true,
-        typeSpeed: 60,
-        deleteSpeed: 60,
+        typeSpeed: 100,
+        deleteSpeed: 100,
         typeColor: '#333',
         cursorColor: '#333'
     })
 
     writer
-        .type('Técnico em Segurança no trabalho')
-        .remove(21)
-        .type('Edificações')
-        .remove(11)
-        .type('Administração')
-        .remove(13)
-        .type('Petróleo e Gás')
-        .remove(14)
+        .type('Curso para Concurso')
+        .remove('para concurso'.length)
+        .type('de AutoCAD')
+        .remove('curso de autocad'.length)
+        .type('Técnico em Petróleo e Gás')
+        .remove('petroleo e gas'.length)
+        .type('Corretor de Imóves')
+        .remove('corretor de imoves'.length)
         .type('Meio Ambiente')
-        .remove(24)
-        .type('Curso de Topografia')
-        .remove(10)
-        .type('Tecnicas de vendas')
-        .remove('Tecnicas de vendas'.length)
-        .type('AutoCAD')
+        .remove('tecnico em meio ambiente'.length)
+        .type('Curso de Vendas')
         .clear()
         .start()
 
@@ -151,7 +147,6 @@ window.onload = function () {
     function detectNumberEffect(){
         if($(document).scrollTop() >= $("#quem-somos").offset().top){
             effectNumber('.count', 0, 50, 30)
-            console.log('ww')
         }
     }
     
@@ -161,6 +156,32 @@ window.onload = function () {
     //         imgSrc: "./assets/imgs/cursos/adm.jpg"
     //     })
     // }
+
+    // Imagens de fundo depoimentos
+    const imgsDep = document.querySelectorAll('.img-vid-dep')
+    imgsDep.forEach(img => {
+        img.style.backgroundImage = `url('${img.getAttribute('src')}')`
+    })
+
+    // open video depoimento
+    const vidsDep = document.querySelectorAll('.vid-dep')
+    vidsDep.forEach(vid => {
+        vid.onclick = function(){
+            BigPicture({
+                el: vid,
+                vidSrc: vid.getAttribute('vid')
+            })
+        }
+    })
+
+    // Link não link
+    const links = document.querySelectorAll('[href]')
+    links.forEach(link => {
+        link.onclick = function(){
+            location.href = link.getAttribute('href')
+        }
+    })
+
 }
 
 

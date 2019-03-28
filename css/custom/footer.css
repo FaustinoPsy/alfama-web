@@ -1,0 +1,22 @@
+#footer-responsive{
+    display: none;
+}
+
+
+
+#logo-footer-normal{
+    border-bottom-right-radius: 60px;
+    border-top-left-radius: 60px;
+    height: 200px;
+}
+
+#logo-footer-normal img{
+    width: 150px;
+}
+
+@media (max-width: 568px){
+    .border-right-o{
+        border: none;
+        text-align: center;
+    }
+}

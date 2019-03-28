@@ -19,14 +19,29 @@
     letter-spacing: -20px;
     margin: 0 !important;
     line-height: 150px;
+
 }
 
 .text-sm{
-    font-size: 40%;
+    font-size: 60%;
     letter-spacing: -10px;
+}
+
+.text-xlg{
+    line-height: 20px;
+    font-size: 150%;
 }
 
 #alunos-cert{
     margin-top: -45px;
+}
+
+@media (max-width: 578px){
+    .text-sm{
+        font-size: 35%;
+    }
+    #count{
+        margin-left: -15px !important
+    }
 }
 

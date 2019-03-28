@@ -33,6 +33,8 @@
     <link rel="stylesheet" href="./css/custom/beneficios.css">
     <link rel="stylesheet" href="./css/custom/cursos.css">
     <link rel="stylesheet" href="./css/custom/quem-somos.css">
+    <link rel="stylesheet" href="./css/custom/depoimentos.css">
+    <link rel="stylesheet" href="./css/custom/footer.css">
     <!-- JS -->
     <script src="./js/custom/master.js"></script>
     <script src="./js/render/cursos.js"></script>
@@ -40,44 +42,43 @@
 
 <body id="main" class="overflow-x-hidden animated fadeIn delay-1s">
     <!-- Menu mais -->
-    <div id="menu-mais" class="position-fixed bg-blue pb-4 pl-1 pr-1 d-flex-column flex-no-wrap animated slideInRight">
-        <div class="w-100 p-2">
+    <div id="menu-mais" class="p-4 position-fixed bg-blue d-flex-column flex-no-wrap animated slideInRight">
+        <div class="w-100">
             <i class="fa fa-chevron-circle-right cursor-pointer text-lg" id="close-menu-mais"></i>
         </div>
-        <div class="d-flex flex-wrap content-center">
-            <a href=""
-                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
-                <i class="fa fa-home text-lg"></i>
+        <div class="d-flex flex-wrap items-center bold">
+            <a href="" class="w-100 text-left p-2 m-1 bg-white blue d-flex items-center cursor-pointer item-menu-mais">
+                <i class="fa fa-home text-lg"></i> &nbsp;
                 Início
             </a>
             <a href="https://www.alfamacursostecnicos.com.br/cursostecnicos/quemsomos"
-                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
-                <i class="fa fa-users text-lg"></i>
+                class="w-100 text-left p-2 m-1 bg-white blue d-flex items-center cursor-pointer item-menu-mais">
+                <i class="fa fa-users text-lg"></i> &nbsp;
                 <span class="line-h-15">Quem Somos</span>
             </a>
             <a href="https://www.alfamacursostecnicos.com.br/cursostecnicos/certificacoes"
-                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
-                <i class="fa fa-medal text-lg"></i>
+                class="w-100 text-left p-2 m-1 bg-white blue d-flex items-center cursor-pointer item-menu-mais">
+                <i class="fa fa-medal text-lg"></i> &nbsp;
                 Certificados
             </a>
             <a href="https://www.alfamacursostecnicos.com.br/cursostecnicos/polos"
-                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
-                <i class="fa fa-warehouse text-lg"></i>
+                class="w-100 text-left p-2 m-1 bg-white blue d-flex items-center cursor-pointer item-menu-mais">
+                <i class="fa fa-warehouse text-lg"></i> &nbsp;
                 Polos
             </a>
             <a href="https://www.alfamacursostecnicos.com.br/cursostecnicos/parceiros"
-                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
-                <i class="fa fa-user-friends text-lg"></i>
+                class="w-100 text-left p-2 m-1 bg-white blue d-flex items-center cursor-pointer item-menu-mais">
+                <i class="fa fa-user-friends text-lg"></i> &nbsp;
                 Parceiros
             </a>
             <a href="https://www.alfamacursostecnicos.com.br/cursostecnicos/faq"
-                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
-                <i class="fa fa-question-circle text-lg"></i>
+                class="w-100 text-left p-2 m-1 bg-white blue d-flex items-center cursor-pointer item-menu-mais">
+                <i class="fa fa-question-circle text-lg"></i> &nbsp;
                 FAQ
             </a>
             <a href="https://www.alfamacursostecnicos.com.br/cursostecnicos/contato"
-                class="col-lg-5 col-md-5 col-sm-3 p-2 mb-1 bg-white blue d-flex-column center text-center cursor-pointer item-menu-mais">
-                <i class="fa fa-phone text-lg"></i>
+                class="w-100 text-left p-2 m-1 bg-white blue d-flex items-center cursor-pointer item-menu-mais">
+                <i class="fa fa-phone text-lg"></i> &nbsp;
                 <span class="line-h-15">Fale Conosco</span>
             </a>
         </div>
@@ -96,7 +97,8 @@
                     Concorra a <span class="blue">Bolsas de Estudo</span>
                 </h1>
                 <div class="w-100 mt-2">
-                    <button class="w-100">Saiba Mais+</button>
+                    <button href="https://www.alfamacursostecnicos.com.br/cursostecnicos/facaalfamacursos"
+                        class="w-100">Saiba Mais+</button>
                 </div>
             </div>
         </div>
@@ -157,7 +159,7 @@
                     <div class="mt-3 mb-1">Concorra a <bold>Bolsas de estudos</bold>
                     </div>
                     <button class="btn-lg"
-                        onclick="location.href = 'https://www.alfamacursostecnicos.com.br/cursostecnicos/facaalfamacursos'">Saiba
+                        href="https://www.alfamacursostecnicos.com.br/cursostecnicos/facaalfamacursos">Saiba
                         Mais+</button>
                 </div>
 
@@ -261,28 +263,159 @@
                 </div>
                 <div class="col-sm-12 mt-4 mb-4 pb-4">
                     <div class="pl-4">São mais de</div>
-                    <div class="d-flex align-items-end">
-                        <h1 class="title-xlg"><span class="count">50</span><span class="releway text-sm"> <bold>M I L</bold></span></h1>
-                
+                    <div class="d-flex align-items-end mb-2">
+                        <h1 class="title-xlg" id="count"><span class="count">50</span></h1>
+                        <span class="releway text-xlg pl-3 text-center">
+                            <bold>MIL</bold>
+                        </span>
+
                     </div>
-                    <div class="text-lg" id="alunos-cert">Alunos <bold>Certificados</bold> em <bold>Todo Brasil.</bold></div>
+                    <div class="text-lg">Alunos <bold>Certificados</bold> em <bold>Todo Brasil.</bold>
+                    </div>
             </section>
         </section>
 
         <!-- Depoimentos -->
-        <section class="vh-100 bg-light white">
+        <section class="vh-100 bg-light">
             <div class="container pt-5 pb-5">
-                <h1 class="orange">Quem faz <span class="blue">comprova!</span></h1>
-                <div class="sub text-muted">Alfama Cursos é a <bold>numero 1</bold></div>
+                <div id="titulo-depoimento">
+                    <h1 class="orange">Quem faz <span class="blue">comprova!</span></h1>
+                    <div class="sub text-muted">Alfama Cursos é a <bold>numero 1</bold>
+                    </div>
+                </div>
+                <div id="content-depoimento" class="p-4 d-flex">
+                    <div id="container-vid-dep" class="col-sm-6 col-md-6 col-sm-12 p-2">
+                        <div id="vid-dep" class="cursor-pointer vid-dep" vid="./assets/videos/vid-dep-1.mp4">
+                            <div class="img-vid-dep center white" src="./assets/imgs/home/depoimentos/vid-1.png">
+                                <h1 class="title-lg"><i class="fa fa-play"></i></h1>
+                            </div>
+                            <div id="desc-vid-dep" class="overflow-hidden">
+                                <div class="text-lg p-2">
+                                    <span class="text-xlg light"><i class="fa fa-quote-left"></i></span>
+                                </div>
+                                <div class=" p-2 text-md">
+                                    Para mim foi <bold>SENSACIONAL</bold> desde o primeiro dia que eu cheguei <bold>até
+                                        hoje</bold>...
+                                </div>
+                                <small class="sub text-muted">
+                                    - <bold>Jefersson</bold> (Aluno da Alfama | Tec. Seg. Trabalho)
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container-vid-dep" class="col-sm-6 col-md-6 col-sm-12 p-2">
+                        <div id="vid-dep" class="cursor-pointer vid-dep" vid="./assets/videos/vid-dep-2.mp4">
+                            <div class="img-vid-dep center white" src="./assets/imgs/home/depoimentos/vid-2.png">
+                                <h1 class="title-lg"><i class="fa fa-play"></i></h1>
+                            </div>
+                            <div id="desc-vid-dep" class="overflow-hidden">
+                                <div class="text-lg p-2">
+                                    <span class="text-xlg light"><i class="fa fa-quote-left"></i></span>
+                                </div>
+                                <div class=" p-2 text-md">
+                                    Se você quer ter um <bold>FUTURO EXCELÊNTE</bold>, venha para <bold><span
+                                            class="blue">Alfama</span> <span class="orange">Cursos</span></bold>.
+                                </div>
+                                <small class="sub text-muted">
+                                    - <bold>Sheldon Menezes</bold> (Aluno da Alfama | Tec. Seg. Trabalho)
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- Redes Sociais -->
+        <section class="bg-blue white p-4">
+            <div class="p-4 center container h-100">
+                <div class="d-flex flex-wrap center">
+                    <div class="rede d-flex-column cursor-pointer items-center p-2"
+                        href="https://www.instagram.com/alfamacursos/">
+                        <div class="icon p-2 text-center">
+                            <h1 class="title-lg"><i class="fab fa-instagram"></i></h1>
+                            @alfamacursos
+                        </div>
+                    </div>
+                    <div class="rede d-flex-column cursor-pointer items-center p-2"
+                        href="https://www.youtube.com/user/alfamacursos?sub_confirmation=1">
+                        <div class="icon p-2 text-center">
+                            <h1 class="title-lg"><i class="fab fa-youtube"></i></h1>
+                            /alfamacursos
+                        </div>
+                    </div>
+                    <div class="rede d-flex-column cursor-pointer items-center p-2"
+                        href="https://twitter.com/alfamacursos">
+                        <div class="icon p-2 text-center">
+                            <h1 class="title-lg"><i class="fab fa-twitter"></i></h1>
+                            /alfamacursos
+                        </div>
+                    </div>
+                    <div class="rede d-flex-column cursor-pointer items-center p-2"
+                        href="https://www.facebook.com/alfamacursos">
+                        <div class="icon p-2 text-center">
+                            <h1 class="title-lg"><i class="fab fa-facebook"></i></h1>
+                            /alfamacursos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rodapé Grande-->
+        <footer class="bg-orange" id="footer">
+            <div class="d-flex w-100 col-sm-12 p-4">
+                <div class="col-lg-3 col-md-3 col-sm-12  mb-3 center bg-white" id="logo-footer-normal">
+                    <img src="./assets/imgs/home/logo.png" alt="">
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-12 p-3 d-flex">
+                    <div class="col-lg-3 col-md-3 col-sm-12 line-h-15 mb-4 border-right-o">
+                        Antidimento e Matrícula:
+                        <h2><span class='text-sm spacing'>(79)</span>3042-5341<br /><span
+                                class='text-sm spacing'>(82)</span> 3336-6417</h2>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 mb-3 line-h-15 pr-3 border-right-o">
+                        <h2>Aracaju / SE</h2>
+                        <small>Av. Augusto Franco, 2980 - (salas 13 a 15) Ponto Novo</small>
+                        <br><br>
+                        <small class="darkorange">
+                            Segunda a Quinta: 9h às 21h<br />
+                            Sextas: 9h às 18h<br />
+                            Sábados: 8h às 12h
+                        </small>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 mb-3 line-h-15 pr-3 border-right-o">
+                        <h2>Maceió / AL </h2>
+                        <small>Av. Tomás Espíndola, 139 - Farol</small>
+                        <br><br>
+                        <small class="darkorange">
+                            Segunda a Sexta: 14:00h às 21h<br />
+                            Sábados: 8h às 12h
+                        </small>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 mb-3 line-h-15 pr-3 border-right-o">
+                        <h2>Paulo Afonso / BA</h2>
+                        <small>Rua Emancipação, 100 - Perpetuo Socorro</small>
+                        <br><br>
+                        <small class="darkorange">
+                            Segunda a Sexta: 09:00h às 18h<br />
+                            Sábados: 9h às 12h
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-12 d-flex p-3 text-center-responsive">
+                COPYRIGHT © 2019 TODOS OS DIREITOS RESERVADOS
+            </div>
+
+        </footer>
+        <!-- Rodapé Pequeno -->
+
     </main>
 
-
-
     <!-- Modal -->
-    <div id="student-space-modal" class="container-modal center wow fadeIn">
+    <div id="student-space-modal" class="container-modal center animated fadeIn">
         <div id="close-modal-container" class="position-absolute"></div>
         <div class="col-lg-4 col-md-5 col-sm-12 wow zoomIn pl-5 pr-5 content-center d-flex-column flex-no-wrap"
             id="modal">
@@ -308,7 +441,6 @@
 
         </div>
     </div>
-
 </body>
 
 </html>

@@ -39,6 +39,34 @@
     background-color: var(--darkblue);
 }
 
+.bold{
+    font-family: releway-bold, sans-serif;
+}
+
+.bg-darkorange{
+    background-color: var(--darkorange)
+}
+
+.darkorange{
+    color: var(--darkorange);
+}
+
+.border-right-o{
+    border-right: 1px solid var(--darkorange)
+}
+
+.dark{
+    color: var(--dark)
+}
+
+@media (max-width: 568px){
+    .text-center-responsive{
+        text-align: center !important;
+    }
+}
+.spacing{
+    letter-spacing: 0px !important;
+}
 
 ::-webkit-scrollbar {
     width: 8px;

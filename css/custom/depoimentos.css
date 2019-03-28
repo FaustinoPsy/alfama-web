@@ -1,0 +1,55 @@
+#vid-dep{
+    height: 500px;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.img-vid-dep{
+    height: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+
+#vid-dep:hover > .img-vid-dep{
+    opacity: 1;
+}
+
+.text-xlg{
+    font-size: 200%;
+}
+
+#desc-vid-dep{
+    line-height: 25px;
+    padding: 0px 25px !important;
+    overflow: auto !important;
+    max-height: 50%; 
+    min-height: 50%; 
+    border: 10px solid white;
+    background-color: white;
+}
+
+
+.light{
+    color: rgba(0,0,0,0.2)
+}
+
+.text-md{
+    font-size: 120%;
+}
+
+@media (max-width: 578px){
+    #container-vid-dep{
+        padding: 10px 0px !important;
+    }
+    .text-xlg{
+        font-size: 130%;
+    }
+
+    .text-md{
+        font-size: 100%;
+    }
+    #desc-vid-dep{
+        padding: 0px 15px !important;
+    }
+}
