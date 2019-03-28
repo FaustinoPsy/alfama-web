@@ -1,19 +1,18 @@
 let reloadSlect = true
 
 function filterCursos(param = '', duration = '', start = '', callback) {
-
+    
     fetch(`http://${location.host}/cursos?q=${param}&d=${duration}&s=${start}`)
-        .then(resp => resp.json())
-        .then(data => renderCursos(data))
-
+        .then(function(resp){return resp.json()})
+        .then(function(data){renderCursos(data)})
+        
 
 
     function renderCursos(data) {
         const containerCursos = document.querySelector('#container-cursos')
         let divsCursos = ''
-        console.log(data.cursos.length)
         if (data.cursos.length > 0) {
-            data.cursos.forEach(curso => {
+            data.cursos.forEach(function(curso){
                 let cursoType = ''
                 if (curso.type == 1) {
                     cursoType = 'Curso Técnico em '
@@ -22,7 +21,7 @@ function filterCursos(param = '', duration = '', start = '', callback) {
                 }
                 divsCursos = divsCursos + "\n"
                 divsCursos = divsCursos + `
-        <div id="container-curso" class="col-lg-3 col-md-4 col-sm-6 p-1 cursor-pointer" onclick="location.href = '${curso.link}'">
+        <div id="container-curso" class="col-lg-3 col-md-4 col-sm-6 p-1 cursor-pointer animated slideInLeft" onclick="location.href = '${curso.link}'">
         <div id="curso" class="d-flex-column">
             <div class="w-100 img-curso" src="./assets/imgs/cursos/${curso.imgName}.jpg"></div>
             <div id="info-curso" class="container p-3">
@@ -41,7 +40,7 @@ function filterCursos(param = '', duration = '', start = '', callback) {
                         <bold>Local: </bold>${curso.location}
                     </small></div>
             </div>
-            <div id="btn-matricular" class="container">
+            <div id="btn-matricular" class="d-flex-column justify-content-end">
                 <button class="w-100">Matricular-se</button>
             </div>
         </div>
@@ -52,7 +51,7 @@ function filterCursos(param = '', duration = '', start = '', callback) {
             containerCursos.innerHTML = divsCursos
 
             const containerImagesCursos = document.querySelectorAll('.img-curso')
-            containerImagesCursos.forEach(container => {
+            containerImagesCursos.forEach(function(container) {
                 const img = container.getAttribute('src')
                 container.style.backgroundImage = `url(${img})`
             })
@@ -61,19 +60,19 @@ function filterCursos(param = '', duration = '', start = '', callback) {
                 const selectDuration = document.querySelector("#filter-duration-curso")
                 const selectStart = document.querySelector('#filter-start-curso')
 
-                data.durations.horas.forEach(duration => {
+                data.durations.horas.forEach(function(duration){
                     let op = document.createElement('option')
                     op.innerHTML = `${duration.time} ${duration.posFix}`
                     op.value = `${duration.time} ${duration.posFix}`
                     selectDuration.appendChild(op)
                 })
-                data.durations.meses.forEach(duration => {
+                data.durations.meses.forEach(function(duration) {
                     let op = document.createElement('option')
                     op.innerHTML = `${duration.time} ${duration.posFix}`
                     op.value = `${duration.time} ${duration.posFix}`
                     selectDuration.appendChild(op)
                 })
-                data.starts.forEach(start => {
+                data.starts.forEach(function(start){
                     let op = document.createElement('option')
                     op.innerHTML = start
                     op.value = start

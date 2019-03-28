@@ -19,57 +19,53 @@ app.engine('html', ejs.renderFile)
 app.set('view engine', 'html')
 
 
-app.get('/', (req, resp) => {
+app.get('/', function (req, resp) {
     resp.render('index')
 })
 
-app.get('/cursos', (req, resp) => {
+app.get('/cursos', function (req, resp) {
     const filterName = req.query.q ? req.query.q.toLowerCase() : ''
     const filterDuration = req.query.d ? req.query.d.toLowerCase() : ''
     const filterStart = req.query.s ? req.query.s.toLowerCase() : ''
 
-    cursosWithFilter = cursos.filter(curso => {
+    cursosWithFilter = cursos.filter(function (curso) {
         const name = curso.name.toLowerCase()
         const description = curso.description.toLowerCase()
         const duration = curso.duration.toLowerCase()
         const start = curso.start.toLowerCase()
+
+        return ((name.indexOf(filterName) >= 0 || description.indexOf(filterName) >= 0) && duration.indexOf(filterDuration) >= 0 && start.indexOf(filterStart) >= 0)
         
-        if((name.indexOf(filterName) >= 0 || description.indexOf(filterName) >= 0) && duration.indexOf(filterDuration) >= 0 && start.indexOf(filterStart) >= 0 ){
-            return true
-        }
-        else {
-            return false
-        }
     })
 
-    let durations = _.uniq(cursosWithFilter.map(curso => curso.duration))
-    let starts = _.uniq(cursos.map(curso => curso.start))
-    durations = durations.map(duration => {
+    let durations = _.uniq(cursosWithFilter.map(function (curso) { return curso.duration }))
+    let starts = _.uniq(cursos.map(function (curso) { return curso.start }))
+    durations = durations.map(function (duration) {
         const durationSplit = duration.split(' ')
-        return {time: Number(durationSplit[0]), posFix: durationSplit[1]}
+        return { time: Number(durationSplit[0]), posFix: durationSplit[1] }
     })
-    durations.sort((a, b) => {
+    durations.sort(function (a, b) {
         return a.time - b.time
     })
 
     const meses = []
     const horas = []
     const outhers = []
-    durations.forEach(duration => {
+    durations.forEach(function (duration) {
         const posFix = duration.posFix.toLowerCase()
-        if(posFix == 'meses' || posFix == 'mês' || posFix == 'mes'){
+        if (posFix == 'meses' || posFix == 'mês' || posFix == 'mes') {
             meses.push(duration)
-        }else if(posFix == 'horas' || posFix == 'hora'){
+        } else if (posFix == 'horas' || posFix == 'hora') {
             horas.push(duration)
-        }else{
+        } else {
             outhers.push(duration)
         }
     })
 
-    resp.json({ cursos: cursosWithFilter, durations: {meses: meses, horas: horas, outhers: outhers}, starts})
+    resp.json({ cursos: cursosWithFilter, durations: { meses: meses, horas: horas, outhers: outhers }, starts, results: cursosWithFilter.length })
 })
 
-app.listen(port, () => {
+app.listen(port, function () {
     console.log(`
         ---
         Local: http://localhost:${port}

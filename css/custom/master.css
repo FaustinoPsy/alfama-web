@@ -299,6 +299,13 @@ button.btn-lg, button.btn-success{
 .cursor-pointer{
     cursor: pointer;
 }
+main{
+    height: 100% !important;
+}
+
+.releway{
+    font-family: releway, sans-serif !important;
+}
 
 .overflow-hidden{
     overflow: hidden;

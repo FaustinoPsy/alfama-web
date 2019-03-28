@@ -1,3 +1,8 @@
+#filter{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
 #container-curso{
     height: 500px;
 }
@@ -18,9 +23,8 @@
     line-height: 15px;
 }
 
-
 #curso:hover{
-    box-shadow: 0px 0px 3px rgba(0,0,0, 0.2);
+    box-shadow: 0px 0px 7px rgba(0,0,0, 0.2);
     /* filter: blur(1px); */
     /* zoom: 3; */
 }
@@ -28,6 +32,7 @@
 #curso:hover > .img-curso{
     opacity: 1;
 }
+
 
 .img-curso{
     width: 100%;
@@ -49,13 +54,22 @@
 }
 
 #info-curso{
-    max-height: 45%;
-    min-height: 45%;
+    max-height: 47%;
+    min-height: 47%;
     overflow: auto;
 }
 
 #btn-matricular{
-    height: 10%;
+    height: 8%;
+}
+
+#btn-matricular button{
+    height: 90%;
+}
+
+
+#filter-cursos-input{
+    font-size: 1rem;
 }
 
 @media (max-width: 578px){

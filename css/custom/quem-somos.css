@@ -1,0 +1,32 @@
+#quem-somos{
+    background: url('../../assets/imgs/bg-qm.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#h1-title-qm-somos{
+    letter-spacing: -4px;
+}
+
+#desc-quem-somos{
+    line-height: 30px;
+}
+
+
+.title-xlg{
+    font-size:1000%;
+    letter-spacing: -20px;
+    margin: 0 !important;
+    line-height: 150px;
+}
+
+.text-sm{
+    font-size: 40%;
+    letter-spacing: -10px;
+}
+
+#alunos-cert{
+    margin-top: -45px;
+}
+

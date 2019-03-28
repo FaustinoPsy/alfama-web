@@ -5,8 +5,8 @@ window.onload = function () {
     const target = document.querySelector('.slogan')
     const writer = new Typewriter(target, {
         loop: true,
-        typeSpeed: 120,
-        deleteSpeed: 120,
+        typeSpeed: 60,
+        deleteSpeed: 60,
         typeColor: '#333',
         cursorColor: '#333'
     })
@@ -36,7 +36,7 @@ window.onload = function () {
     const buttonsCloseModal = document.querySelectorAll('.close-modal')
     const containersModal = document.querySelectorAll('.container-modal')
     const closeContainerModal = document.querySelectorAll('#close-modal-container')
-    buttonsModal.forEach(button => {
+    buttonsModal.forEach(function (button) {
         const target = document.querySelector(button.getAttribute('target'))
         button.onclick = function (event) {
             event.preventDefault()
@@ -47,16 +47,16 @@ window.onload = function () {
             // document.body.style.overflow = 'hidden'
         }
     })
-    buttonsCloseModal.forEach(button => {
+    buttonsCloseModal.forEach(function (button) {
         button.onclick = fadeOut
-        closeContainerModal.forEach(container => {
+        closeContainerModal.forEach(function (container) {
             container.onclick = fadeOut
         })
 
         function fadeOut() {
-            containersModal.forEach(container => {
+            containersModal.forEach(function (container) {
                 container.classList.add('fadeOut')
-                setTimeout(() => {
+                setTimeout(function () {
                     container.style.display = "none"
                     container.classList.remove('fadeOut')
                     // document.body.style.overflow = 'initial'
@@ -70,7 +70,7 @@ window.onload = function () {
     const menuMais = document.querySelector('#menu-mais')
     const homePage = document.querySelector('#home-page')
     const buttonCloseMenuMais = document.querySelector('#close-menu-mais')
-    buttonMenuMais.forEach(button => {
+    buttonMenuMais.forEach(function (button) {
         button.onclick = function () {
             menuMais.style.display = 'flex'
         }
@@ -83,7 +83,7 @@ window.onload = function () {
         menuMais.classList.remove('slideInRight')
         menuMais.classList.add('slideOutRight')
 
-        setTimeout(() => {
+        setTimeout(function () {
             menuMais.style.display = 'none'
             menuMais.classList.remove('slideOutRight')
             menuMais.classList.add('slideInRight')
@@ -96,7 +96,7 @@ window.onload = function () {
 
     // Imagens Cursos
     const containerImagesCursos = document.querySelectorAll('.img-curso')
-    containerImagesCursos.forEach(container => {
+    containerImagesCursos.forEach(function (container) {
         const img = container.getAttribute('src')
         container.style.backgroundImage = `url(${img})`
     })
@@ -114,19 +114,18 @@ window.onload = function () {
     selectStart.onchange = filterCurso
 
 
-    function filterCurso(){
+    function filterCurso() {
         let inputValue = filterCursosInput.value
         let selectValue = selectDuration.value
         let startValue = selectStart.value
-        
-        if(selectValue == "Todos"){
+
+        if (selectValue == "Todos") {
             selectValue = ''
         }
 
         filterCursos(inputValue, selectValue, startValue)
-        console.log(inputValue, selectValue, startValue)
     }
-    
+
 
 
 
@@ -143,14 +142,25 @@ window.onload = function () {
 
     window.bioEp.init({})
 
-    setTimeout(() => {
+    setTimeout(function () {
         document.getElementById('bio_ep').style.opacity = 1
     }, 4000)
 
+    window.onscroll = detectNumberEffect
 
-   
+    function detectNumberEffect(){
+        if($(document).scrollTop() >= $("#quem-somos").offset().top){
+            effectNumber('.count', 0, 50, 30)
+            console.log('ww')
+        }
+    }
+    
+    // document.querySelector("#logo-top").onclick = function(){
+    //     BigPicture({
+    //         el: document.querySelector("#logo-top"),
+    //         imgSrc: "./assets/imgs/cursos/adm.jpg"
+    //     })
+    // }
 }
-
-
 
 

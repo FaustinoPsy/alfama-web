@@ -21,6 +21,8 @@
     <script src="./js/bootstrap/bootstrap.min.js"></script>
     <script src="./js/wow/wow.js"></script>
     <script src="./js/bioep/bioep.min.js"></script>
+    <script src="./js/count-js/count.js"></script>
+    <script src="./js/bigPicture/bigPicture.min.js"></script>
 
 
     <!-- Custom -->
@@ -30,12 +32,13 @@
     <link rel="stylesheet" href="./css/custom/presentation.css">
     <link rel="stylesheet" href="./css/custom/beneficios.css">
     <link rel="stylesheet" href="./css/custom/cursos.css">
+    <link rel="stylesheet" href="./css/custom/quem-somos.css">
     <!-- JS -->
     <script src="./js/custom/master.js"></script>
     <script src="./js/render/cursos.js"></script>
 </head>
 
-<body class="overflow-x-hidden"> 
+<body id="main" class="overflow-x-hidden animated fadeIn delay-1s">
     <!-- Menu mais -->
     <div id="menu-mais" class="position-fixed bg-blue pb-4 pl-1 pr-1 d-flex-column flex-no-wrap animated slideInRight">
         <div class="w-100 p-2">
@@ -81,6 +84,7 @@
 
     </div>
 
+
     <!-- Modal saida -->
     <div id="bio_ep">
         <div class="w-100 center h-100">
@@ -98,8 +102,9 @@
         </div>
     </div>
 
+
     <!-- Home Page -->
-    <main id="home-page" class="animated fadeIn delay-1s">
+    <main id="home-page">
 
         <!-- Presentation -->
         <section id="presentation" class="">
@@ -109,7 +114,7 @@
 
                 <!-- Logo -->
                 <div id="logo-top" class="col-sm-2 text-center">
-                    <div class="">
+                    <div>
                         <img src="./assets/imgs/home/logo.png" width="130px" alt="">
                     </div>
                 </div>
@@ -128,8 +133,7 @@
             </div>
 
             <!-- Barras menu menor -->
-            <div class="menu-sm content-center p-3 border-bottom" data-toggle="collapse"
-                href="#menu-sm">
+            <div class="menu-sm content-center p-3 border-bottom" data-toggle="collapse" href="#menu-sm">
                 <i class="fa fa-bars text-lg blue"></i>
             </div>
 
@@ -218,8 +222,8 @@
         <section id="cursos" class="vh-100 pt-5">
             <div class="container">
                 <h1 class="orange">Escolha seu <span class="blue">curso</span></h1>
-                <div class="sub">e garata o sucesso!</div>
-                <div class="col-sm-12 p-3 mb-3 w-100 bg-light mt-3 d-flex">
+                <div class="sub text-muted">e garata o sucesso!</div>
+                <div id="filter" class="col-sm-12 p-3 mb-3 w-100 mt-3 d-flex bg-light">
                     <div class="d-flex-column col-lg-4 col-md-4 col-sm-12">
                         <small>Título: </small>
                         <input type="text" id="filter-cursos-input" class="pl-2 pr-2">
@@ -239,6 +243,38 @@
             </div>
             <!-- Renderização dos cursos via API (./js/render/cursos.js) -->
             <div id="container-cursos" class="container d-flex flex-wrap pt-4 pb-4 wow fadeIn"></div>
+        </section>
+
+        <!-- Quem somos -->
+        <section id='quem-somos' class="bg-orange">
+            <div class="wave"></div>
+            <section id="content-quem-somos" class="container p-4">
+                <div class="col-sm-12 mb-4" id="text-quem-somos">
+                    <h1 class="title-lg text-left neon" id="h1-title-qm-somos">Quem<br />Somos</h1>
+                </div>
+                <div class="col-sm-12 text-lg" id="desc-quem-somos">
+                    Somos uma empresa especializada em desenvolvimento de <bold>cursos de extensão e sistemas
+                        especializados em Educação a Distância</bold>.
+                    <br><br>
+                    A empresa foi <bold>criada em 2007</bold>, com o intuito de <bold>oferecer novos métodos de
+                        aprendizado</bold> aos alunos.
+                </div>
+                <div class="col-sm-12 mt-4 mb-4 pb-4">
+                    <div class="pl-4">São mais de</div>
+                    <div class="d-flex align-items-end">
+                        <h1 class="title-xlg"><span class="count">50</span><span class="releway text-sm"> <bold>M I L</bold></span></h1>
+                
+                    </div>
+                    <div class="text-lg" id="alunos-cert">Alunos <bold>Certificados</bold> em <bold>Todo Brasil.</bold></div>
+            </section>
+        </section>
+
+        <!-- Depoimentos -->
+        <section class="vh-100 bg-light white">
+            <div class="container pt-5 pb-5">
+                <h1 class="orange">Quem faz <span class="blue">comprova!</span></h1>
+                <div class="sub text-muted">Alfama Cursos é a <bold>numero 1</bold></div>
+            </div>
         </section>
 
     </main>
